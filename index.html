@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/94834d3415.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#"><img src="images/logo.png" alt="Logo" class="logo"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><span class="themeSwitch"></span></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee <br /> It's <span>Starbucks</span> </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, sit? Numquam at, dolorem natus in laborum libero, sit doloribus ipsa fugit error maiores repellendus mollitia, quaerat sapiente soluta voluptates possimus.</p>
+
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="images/frappuccino.png" alt="frappuccino">
+            </div>
+    
+        </div>
+
+        <ul class="sci">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </section>
+
+
+
+    <script>
+
+        let themeSwitch = document.querySelector('.themeSwitch');
+        let body = document.querySelector('body');
+
+        themeSwitch.onclick = function(){
+            themeSwitch.classList.toggle('active');
+            body.classList.toggle('dark');
+
+        }
+
+    </script>
+    
+</body>
+</html>
