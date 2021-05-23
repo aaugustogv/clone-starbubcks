@@ -7,7 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
 }
 
 :root {
@@ -18,7 +17,9 @@
     --black2: #333;
 }
 
-
+body {
+   overflow-x: hidden;
+}
 
 /* Mudando as cores para o modo noturno, ele não mudou nada, só as cores*/
 .dark {
@@ -256,5 +257,52 @@ header ul li a {
 
     .navigation { /*Sumindo com o menu*/
         display: none;
+    }
+
+    .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--white);
+        flex-direction: column;
+    }
+
+    header ul li a {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    header ul li {
+        margin-left: 0;
+        margin: 10px 0;
+    }
+
+    .toggle {
+        position:relative;
+        width: 30px;
+        height: 30px;
+        background: url(images/menu.png);
+        background-size: 30px;
+        filter: invert(1);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .toggle.active {
+        background: url(images/close.png);
+        background-size: 30px;
+        filter: invert(1);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .dark .toggle {
+        filter: invert(0);
     }
 }
