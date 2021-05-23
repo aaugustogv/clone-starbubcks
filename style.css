@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 :root {
@@ -16,6 +17,9 @@
     --white2: #fff;
     --black2: #333;
 }
+
+
+
 /* Mudando as cores para o modo noturno, ele não mudou nada, só as cores*/
 .dark {
     --black: #fff;
@@ -208,4 +212,49 @@ header ul li a {
 
 .themeSwitch.active::before {
     content: '\f185';
+}
+
+/*########### Responsive ###########*/ 
+
+@media (max-width: 991px) {
+
+    section {
+        padding:  150px 20px; 
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .sci {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .content .textBox,
+    .content .imgBox {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .content .imgBox img {
+        max-width: 250px;
+        transform: translate(51px);
+    }
+    
+    .content .imgBox::before {
+        clip-path: circle(125px at center);
+    }
+
+    .content .textBox h2 {
+        font-size: 1.75rem;
+    }
+
+    .navigation { /*Sumindo com o menu*/
+        display: none;
+    }
 }
